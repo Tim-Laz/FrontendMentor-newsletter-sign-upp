@@ -1,0 +1,206 @@
+/*
+## Colors
+Your users should be able to:
+
+- Add their email and submit the form
+- See a success message with their email after successfully submitting the form
+- See form validation messages if:
+  - The field is left empty
+  - The email address is not formatted correctly
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+*/
+:root {
+  --roboto: "Roboto", sans-serif;
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--roboto);
+  color: var(--Dark-Slate-Grey);
+  font-weight: 400;
+  background-color: var(--Charcoal-Grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+.container {
+  max-width: 97.5rem;
+  max-height: 65rem;
+  height: 100%;
+  padding: 2.2rem 2.2rem 2.2rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  background-color: var(--White);
+  border-radius: 30px;
+}
+
+picture {
+  height: 100%;
+  justify-self: right;
+}
+
+.img {
+  height: 100%;
+}
+
+.join-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-heading {
+  font-size: 5.6rem;
+  line-height: 100%;
+}
+
+.join-heading {
+  margin-bottom: 3rem;
+}
+
+.join-descr {
+  margin-bottom: 3rem;
+}
+
+.updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 3.5rem;
+}
+
+.updates-list li {
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+.updates-list li::before {
+  content: url("/assets/images/icon-list.svg");
+}
+
+.updates-el {
+  display: flex;
+  /* align-items: center; */
+  gap: 1.5rem;
+}
+
+.email-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.email-label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.valid-email {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--Tomato);
+}
+
+#email {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset 0 0 0 1px var(--Grey);
+  margin-bottom: 2.2rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+#email::placeholder {
+  font-size: 1.6rem;
+  color: var(--Grey);
+}
+
+.wrong-email {
+  background-color: hsla(14, 100%, 62%, 0.15);
+  box-shadow: inset 0 0 0 1px var(--Tomato) !important;
+}
+
+.wrong-email::placeholder {
+  color: var(--Tomato) !important;
+}
+
+.btn {
+  border: none;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, #ff537b, #ff693c);
+  box-shadow: 0px 15px 40px -12px var(--Tomato);
+}
+
+.thanks-container {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 42rem;
+  padding: 4.5rem 4.5rem 5rem 4.5rem;
+  border-radius: 30px;
+}
+
+.icon-success {
+  width: 4.5rem;
+}
+
+.thanks-heading {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+.email-span {
+  font-weight: 700;
+}
+
+.thanks-descr {
+  font-size: 1.4rem;
+}
+
+.btn-dismiss {
+  padding: 1.5rem;
+  font-size: 1.4rem;
+}
