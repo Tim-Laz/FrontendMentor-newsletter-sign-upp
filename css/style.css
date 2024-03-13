@@ -156,6 +156,10 @@ picture {
   color: var(--Tomato) !important;
 }
 
+.wrong-email:focus {
+  outline-color: var(--Tomato);
+}
+
 .btn {
   border: none;
   width: 100%;
