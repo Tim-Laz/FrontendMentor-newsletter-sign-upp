@@ -2,6 +2,7 @@ const emailForm = document.querySelector("#email");
 const btnSub = document.querySelector(".btn-subscribe");
 const btnDismiss = document.querySelector(".btn-dismiss");
 const validEmail = document.querySelector(".valid-email");
+const emailSpan = document.querySelector(".email-span");
 const subForm = document.querySelector(".subscribe-form");
 const signupContainer = document.querySelector(".container");
 const thanksContainer = document.querySelector(".thanks-container");
@@ -23,6 +24,7 @@ subForm.addEventListener("submit", function (e) {
 
   signupContainer.classList.add("hidden");
   thanksContainer.classList.remove("hidden");
+  emailSpan.textContent = emailVal;
   validEmail.classList.add("hidden");
   emailForm.classList.remove("wrong-email");
 });
@@ -31,6 +33,7 @@ btnDismiss.addEventListener("click", function () {
   signupContainer.classList.remove("hidden");
   thanksContainer.classList.add("hidden");
 
+  emailSpan.textContent = "";
   emailForm.value = "";
 });
 
