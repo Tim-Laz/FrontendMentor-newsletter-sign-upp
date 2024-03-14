@@ -15,6 +15,7 @@ function validateEmail(email) {
 }
 
 subForm.addEventListener("submit", function (e) {
+  e.preventDefault();
   let emailVal = emailForm.value;
   if (!validateEmail(emailVal)) {
     validEmail.classList.remove("hidden");
@@ -36,5 +37,3 @@ btnDismiss.addEventListener("click", function () {
   emailSpan.textContent = "";
   emailForm.value = "";
 });
-
-emailForm.value = "testing@mail.ru";
