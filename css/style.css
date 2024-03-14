@@ -103,7 +103,7 @@ picture {
 }
 
 .updates-list li::before {
-  content: url("/../assets/images/icon-list.svg");
+  content: url("../assets/images/icon-list.svg");
 }
 
 .updates-el {
